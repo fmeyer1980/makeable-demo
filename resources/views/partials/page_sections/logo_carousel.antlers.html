@@ -1,0 +1,24 @@
+
+
+
+
+<section class="logo-carousel relative overflow-x-clip space-y-700" aria-label="Se vores samarbejds partner">
+    <ul class="flex gap-xl move-left">
+        {{ list }}
+            <li class="shrink-0 flex items-center justify-center">
+                {{ glide :src="logo" height="{{ sizes }}" }}
+                    <img class=" grayscale-100 opacity-60 dark:contrast-0" src="{{ url }}" width="{{ width }}" height="{{ height }}" alt="logo">
+                {{ /glide }}
+            </li>
+        {{ /list }}
+    </ul>
+        <ul class="flex gap-xl move-right">
+        {{ list }}
+            <li class="shrink-0 flex items-center justify-center">
+                {{ glide :src="logo" height="{{ sizes  }}" }}
+                    <img class=" grayscale-100 opacity-60 dark:contrast-0" src="{{ url }}" width="{{ width }}" height="{{ height }}" alt="logo">
+                {{ /glide }}
+            </li>
+        {{ /list }}
+    </ul>
+</section>

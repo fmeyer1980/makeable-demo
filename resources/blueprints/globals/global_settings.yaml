@@ -1,0 +1,42 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: site_name
+            field:
+              type: text
+              display: 'Site name'
+              localizable: true
+          -
+            handle: phone
+            field:
+              input_type: tel
+              type: text
+              display: Phone
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: Email
+          -
+            handle: addresses
+            field:
+              type: grid
+              display: Addresses
+              fields:
+                -
+                  handle: city
+                  field:
+                    type: text
+                    display: City
+                -
+                  handle: address
+                  field:
+                    type: text
+                    display: Address
+          -
+            import: socialmedia_links

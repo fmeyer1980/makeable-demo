@@ -1,0 +1,72 @@
+title: 'Image textbox'
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: text
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+        - title
+        - primary_color
+        - large_text
+        - bts_paragraph
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+  -
+    handle: links
+    field: links.links
+  -
+    handle: show_settings
+    field:
+      type: revealer
+      display: 'Show settings'
+  -
+    handle: settings
+    field:
+      type: group
+      display: Settings
+      if:
+        show_settings: 'equals true'
+      fields:
+        -
+          handle: section_color
+          field: common_fields.section_color
+          config:
+            width: 50
+        -
+          handle: image_width
+          field:
+            options:
+              - '40'
+              - 50
+              - '60'
+            default: '40'
+            type: width
+            display: 'Image width'
+            width: 25
+        -
+          handle: flip_content
+          field:
+            type: toggle
+            display: 'Flip content'
+            width: 25
+        -
+          handle: full_width
+          field:
+            type: toggle
+            display: 'Full width'
+            width: 25

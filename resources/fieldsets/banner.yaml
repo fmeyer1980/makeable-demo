@@ -1,0 +1,28 @@
+title: Banner
+fields:
+  -
+    handle: text
+    field:
+      buttons:
+        - h1
+        - bold
+        - italic
+        - removeformat
+        - primary_color
+        - secondary_color
+      save_html: true
+      toolbar_mode: floating
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+      localizable: true
+  -
+    handle: links
+    field: links.links
+  -
+    handle: media
+    field:
+      container: assets
+      type: assets
+      display: Media
+      max_files: 1

@@ -1,0 +1,36 @@
+title: 'Logo carousel'
+fields:
+  -
+    handle: list
+    field:
+      type: grid
+      display: List
+      add_row: 'Add logo'
+      fields:
+        -
+          handle: logo
+          field:
+            max_files: 1
+            container: assets
+            folder: logos
+            type: assets
+            display: Logo
+        -
+          handle: sizes
+          field:
+            options:
+              -
+                key: 50
+                value: XS
+              -
+                key: 75
+                value: Small
+              -
+                key: 100
+                value: Medium
+              -
+                key: 125
+                value: Large
+            default: '125'
+            type: select
+            display: Sizes

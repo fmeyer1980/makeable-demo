@@ -1,0 +1,18 @@
+{{ partial:page_sections/intro }}
+{{ if page_sections }}
+    {{ page_sections }}
+        {{ partial src="page_sections/{{ type }}" }}
+    {{ /page_sections }}
+{{ endif }}
+{{# 
+    <ul class="grid grid-cols-4 gap-12 w-full max-w-[70rem] mx-auto">
+        {{ collection in="cases" }}
+
+            <li>
+                <a href="{{ url }}">
+                    <img src="{{ glide:featured_image w="1600" h="900" }}" id="{{ title | slugify }}" class="card aspect-[2/3] w-full h-auto object-cover rounded-3xl" alt="">
+                </a>
+            </li>
+            
+        {{ /collection }}
+    </ul> #}}

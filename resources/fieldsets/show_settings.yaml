@@ -1,0 +1,33 @@
+title: 'Show settings'
+fields:
+  -
+    handle: section_settings
+    field:
+      type: group
+      display: 'Section settings'
+      fields:
+        -
+          handle: section_color
+          field: common_fields.section_color
+          config:
+            display: 'Background color'
+        -
+          handle: pt
+          field: common_fields.pt
+          config:
+            width: 50
+        -
+          handle: pb
+          field: common_fields.pb
+          config:
+            width: 50
+        -
+          handle: content_width
+          field:
+            options:
+              - 33
+              - 50
+              - 66
+            default: '66'
+            type: width
+            display: 'Content width'

@@ -1,0 +1,34 @@
+title: Benefits
+fields:
+  -
+    handle: list
+    field:
+      type: grid
+      display: List
+      fields:
+        -
+          handle: number
+          field:
+            type: text
+            display: Number
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      save_html: true
+      toolbar_mode: floating
+      remove_empty_nodes: trim
+      type: bard
+      display: Text
+  -
+    handle: links
+    field: links.links

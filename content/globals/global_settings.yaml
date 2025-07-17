@@ -1,0 +1,33 @@
+title: 'Global settings'
+data:
+  site_name: 'Makeable APS'
+  phone: '70 70 17 47'
+  email: info@makeable.dk
+  addresses:
+    -
+      id: mcthbhkh
+      city: Aarhus
+      address: 'Langhøjvej 1D, 8381 Tilst, Aarhus'
+    -
+      id: mcthbujn
+      city: København
+      address: 'Amaliegade 6, 1256 København K'
+  socialmedia_links:
+    -
+      id: mcthce8x
+      handle: makeabledk
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: true
+    -
+      id: mcthcwxm
+      handle: company/makeable/
+      prefix: 'https://www.linkedin.com/'
+      type: linkedin
+      enabled: true
+    -
+      id: mcthdcts
+      handle: 'makeabledk/?hl=da'
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true

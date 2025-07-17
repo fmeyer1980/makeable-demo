@@ -1,0 +1,28 @@
+title: Video
+fields:
+  -
+    handle: quote
+    field:
+      type: text
+      display: Quote
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+  -
+    handle: poster_image
+    field:
+      container: assets
+      type: assets
+      display: 'Poster image'
+      max_files: 1
+  -
+    handle: video
+    field:
+      container: assets
+      max_files: 1
+      display: Video
+      type: assets
+      always_save: false
+      folder: video

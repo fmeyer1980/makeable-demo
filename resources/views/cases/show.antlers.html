@@ -1,0 +1,17 @@
+<section>
+    <div class="grid grid-cols-4 grid-rows-2">
+        <div class="herocasee relative overflow-hidden  h-full rounded-custom col-start-1 col-end-4 row-start-1 row-end-3" style="view-transition-name: case-image-{{ title | slugify }};">
+            {{ if (featured_image | ends_with('.mp4')) }}
+                <video loop="loop" muted loop="loop" preload="auto" playsinline autoplay class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 duration-300">
+                    <source src="{{ featured_image }}" type="video/mp4">
+                </video>
+            {{ else }}
+                {{ partial:components/image :imagePath="featured_image" w="700" h="400" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 duration-300"  }}
+            {{ endif }}
+        </div>
+        <div class="bg-light-glare dark:bg-dark-shade z-10 col-start-3 col-end-5 row-start-2 row-end-3 rounded-tl-4xl p-800 space-y-600" style="view-transition-name: text-{{ title | slugify }};">
+            <h1>{{ headline }}</h1>
+            <p class="text-500">{{ teaser }}</p>
+        </div>
+    </div>
+</section>

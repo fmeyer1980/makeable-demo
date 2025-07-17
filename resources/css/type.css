@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/public/fonts/gilroy-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/public/fonts/gilroy-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/public/fonts/gilroy-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MaterialSymbolsOutlined";
+  src: url("/public/fonts/MaterialSymbolsOutlined_Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
+  text-wrap: balance;
+  line-height: var(--leading-tight);
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: var(--size-900);
+  line-height: var(--leading-flat);
+  max-width: 20ch;
+}
+
+h2,
+.h2 {
+  font-size: var(--size-800);
+  line-height: var(--leading-flat);
+  max-width: 25ch;
+}
+
+h3,
+.h3 {
+  font-size: var(--size-550);
+  max-width: 35ch;
+}
+
+h4,
+.h4 {
+  font-size: var(--size-400);
+}
+
+h5,
+.h5 {
+  font-size: var(--size-300);
+}
+
+h6,
+.h6 {
+  font-size: var(--size-200);
+}
+
+p{
+  text-wrap: pretty;
+}
+
+.text-large{
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: var(--leading-tight);
+}
+
+.text-xl{
+  font-size: var(--size-600);
+  font-weight: 500;
+  font-family: var(--font-heading);
+}

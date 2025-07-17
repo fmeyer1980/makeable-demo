@@ -1,0 +1,23 @@
+<section class="grid grid-cols-2 gap-lg @container py-700" aria-label="">
+    <div class="relative prose-h1:text-dark-shade dark:prose-h1:text-primary prose-h1:text-[13cqi] prose-h1:max-w-[4ch] prose-h1:leading-[.8] text-right flex flex-col items-end flow-y flow-space-900 prose-p:text-550 prose-p:z-10 prose-p:leading-tight prose-p:opacity-70">
+        {{ intro_text }}
+        <div class="flex gap-100 flow-space-600">
+            {{ intro_links }}
+                {{ partial:components/btn :text="text" :url="url" color="secondary" }}
+            {{ /intro_links }}
+        </div>
+        {{ svg src="leaf" class="absolute -top-[8.2cqi] -right-[3.5cqi] h-[50cqi] w-auto !mt-0 mix-blend-lighten dark:mix-blend-darken" }}
+    </div>
+    <div class="relative mt-gutter mx-gutter">
+        <div class="rounded-custom overflow-clip w-full h-full relative z-20">
+            {{ if intro_media | ends_with('.mp4')  }}
+                <video loop="loop" muted loop="loop" preload="auto" playsinline autoplay class="absolute inset-0 w-full h-full object-cover">
+                    <source src="{{ intro_media }}" type="video/mp4">
+                </video>
+            {{ else }}
+                {{ partial:components/picture loading="eager" :imagePath="intro_media" ratio="16" mdRatio="8" class="absolute inset-0 w-full h-full object-cover" }}
+            {{ endif }}
+        </div>
+        {{ svg src="pattern-one" class="text-primary dark:opacity-40 absolute top-0 left-1/2 h-full w-auto scale-125 -translate-x-1/2" }}
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<header class="wrapper fixed top-gutter left-0 right-0 z-[99] 2xl:-left-gutter 2xl:-right-gutter">
+    <div class="[width:inherit] rounded-custom overflow-clip shadow-[0px_.5rem_2rem_0px_rgba(0,0,0,0.0)]" :class="{'bg-white shadow-[0px_.5rem_2rem_0px_rgba(0,0,0,0.10)] dark:bg-dark-shade dark:shadow-[0px_.5rem_2rem_0px_rgba(0,0,0,0.50)]': atTop }" aria-label="Header" x-data="{ menuIsOpen: false }"">
+        <div class="px-gutter flex items-center gap-gutter h-(--header-height) ">
+            <a class="h-[30%]" href="/" aria-label="Gå til forsiden">
+                {{ svg src="logo" class="text-dark-shade dark:text-light-glare h-full w-auto" aria-hidden="true" }}
+            </a>
+            {{ partial:main_nav_desktop }}
+            {{ partial:components/color_mode }}
+        </div>
+    </div>
+   
+</header>
+
+
+

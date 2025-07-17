@@ -1,0 +1,8 @@
+<{{ as or 'a' }} class="btn {{ class }}" href="{{ url }}" data-style="{{ color }}{{ outline ?= '-outline' }}">
+    <span>{{ text or 'Læs mere' }}</span>
+    {{ if icon }}
+        <span class="size-[2.2em]">
+            {{ svg src="icons/{{ icon }}" class="h-[.9em] w-auto" }}
+        </span>
+    {{ /if }}
+</{{ as or 'a' }}>

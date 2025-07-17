@@ -1,0 +1,14 @@
+title: 'Featured cases'
+fields:
+  -
+    handle: headline
+    field:
+      type: text
+      display: Headline
+  -
+    handle: list
+    field:
+      collections:
+        - cases
+      type: entries
+      display: List

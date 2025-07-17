@@ -1,0 +1,54 @@
+title: 'Page sections'
+fields:
+  -
+    handle: page_sections
+    field:
+      collapse: accordion
+      fullscreen: false
+      type: replicator
+      display: 'Page sections'
+      localizable: true
+      sets:
+        basic_blocks:
+          display: 'Basic blocks'
+          icon: addon-boxes-stack
+          sets:
+            image_textbox:
+              display: 'Image textbox'
+              icon: align-left
+              fields:
+                -
+                  import: image_textbox
+            divider:
+              display: Divider
+              fields: {  }
+            featured_cases:
+              display: 'Featured cases'
+              fields:
+                -
+                  import: featured_cases
+            bg_patterns:
+              display: 'Bg patterns'
+              fields:
+                -
+                  handle: patterns
+                  field:
+                    path: svg/patterns
+                    type: iconamic
+                    display: Patterns
+            about_gallery:
+              display: 'About gallery'
+              fields:
+                -
+                  import: about_gallery
+            featured_testimonials:
+              display: 'Featured testimonials'
+              fields:
+                -
+                  handle: section_heading
+                  field: common_fields.section_heading
+            logo_carousel:
+              display: 'Logo carousel'
+              fields:
+                -
+                  import: logo_carousel

@@ -1,0 +1,29 @@
+title: 'Featured employees'
+fields:
+  -
+    handle: headline
+    field:
+      type: text
+      display: Headline
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text
+  -
+    handle: links
+    field: links.links
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Image
+  -
+    handle: amount
+    field:
+      max: 25
+      type: range
+      display: Amount
+      instructions: 'Max employees in list'

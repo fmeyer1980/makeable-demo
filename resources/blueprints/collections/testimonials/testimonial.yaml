@@ -1,0 +1,40 @@
+title: Testimonial
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: hidden
+              required: false
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: profile_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Profile Image'
+          -
+            handle: text
+            field:
+              type: textarea
+              display: Text
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

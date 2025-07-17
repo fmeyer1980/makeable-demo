@@ -1,0 +1,38 @@
+
+{{# <div class=" aspect-[16/9] aspect-[16/23] aspect-[16/16]"></div> #}}
+
+<section class="grid grid-cols-12 grid-rows-2 gap-800">
+    {{ images }}
+
+    
+    {{ _aspect = switch(
+        (index == "0" || index == "3" || index == "4" ) => "9",
+        (index == "5" ) => "23",
+        () => "16",
+    ) }}
+
+    {{ _rows = switch(
+        (index < "4") => "row-start-1 row-end-2 self-end",
+        () => "row-start-2 row-end-3 self-start",
+    ) }}
+
+    {{ _cols = switch(
+        (index == "0") => "col-start-1 col-end-4",
+        (index == "1") => "col-start-4 col-end-7",
+        (index == "2") => "col-start-7 col-end-10",
+        (index == "3") => "col-start-10 col-end-13",
+        (index == "4") => "col-start-2 col-end-5",
+        (index == "5") => "col-start-5 col-end-7",
+        () => "aspect-[1/1]",
+    ) }}
+        {{ partial:components/image :imagePath="url" w="{{ "1600" | divide(2) }}" h="{{ (_aspect + '00') | divide(2) }}" class="rounded-custom  w-full aspect-[16/{{ _aspect }}] {{ _cols }} {{ _rows }} " }}
+    {{ /images }}
+    <div class="col-start-7 col-end-13 row-start-2 row-end-3 self-start bg-light-shade dark:bg-dark p-800 rounded-custom prose-h2:text-600 flow-y flow-space-500 prose-p:opacity-70">
+        {{ text_box }}
+         <div class="flex gap-100 flow-space-600">
+            {{ links }}
+                {{ partial:components/btn :text="text" :url="url" color="secondary" }}
+            {{ /links }}
+        </div>
+    </div>
+</section>

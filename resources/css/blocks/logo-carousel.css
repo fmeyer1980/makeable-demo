@@ -1,0 +1,23 @@
+.logo-carousel{
+     &::before, &::after{
+        @apply 
+        absolute
+        top-0
+        h-full
+        w-xl
+        z-10
+     }
+    @apply
+    after:right-0 
+    after:bg-gradient-to-l 
+    after:from-light-glare 
+    after:to-light-glare/0 
+    dark:after:from-dark-shade 
+    dark:after:to-dark-shade/0
+    before:left-0
+    before:bg-gradient-to-r
+    before:from-light-glare 
+    before:to-light-glare/0 
+    dark:before:from-dark-shade 
+    dark:before:to-dark-shade/0
+}

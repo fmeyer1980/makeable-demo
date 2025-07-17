@@ -1,0 +1,22 @@
+title: 'Tabs image textbox'
+fields:
+  -
+    handle: list
+    field:
+      collapse: accordion
+      type: replicator
+      display: List
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            item:
+              display: Item
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  import: image_textbox

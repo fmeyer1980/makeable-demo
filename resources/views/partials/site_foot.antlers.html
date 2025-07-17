@@ -1,0 +1,62 @@
+<footer class="wrapper">
+    <div class="p-lg bg-primary text-light-glare dark:bg-dark rounded-custom space-y-lg mb-lg">
+        <div class="flex justify-between">
+            <nav>
+                <ul class="flex gap-x-lg">
+                    {{ nav:collection:pages }}
+                        {{ if slug | contains('Cases')  }}
+                            <li class="order-3">
+                                <a class="font-bold {{ is_current || is_parent ?= ' underline underline-offset-4 decoration-primary' }}" href="{{ url }}">
+                                    {{ title }}
+                                </a>
+                                <ul class="mt-100 space-y-1">
+                                    {{ taxonomy from="categories" }}
+                                        <li class="opacity-80"><a href="{{ url }}">{{ title }}</a></li>
+                                    {{ /taxonomy }}
+                                </ul>
+                            </li>
+                        {{ elseif children }}
+                            <li class="order-{{ index }}">
+                                <a class="font-bold {{ is_current || is_parent ?= ' underline underline-offset-4 decoration-primary' }}" href="{{ url }}">
+                                    {{ title }}
+                                </a>
+                                <ul class="mt-100 space-y-1">
+                                    {{ children }}
+                                        <li class="opacity-80"><a href="{{ url }}">{{ title }}</a></li>
+                                    {{ /children }}
+                                </ul>
+                            </li>
+                        {{ endif }}
+                    {{ /nav:collection:pages }}
+                </ul>
+            </nav>
+            <div class="flex flex-col items-end text-right flow-y flow-space-100">
+                <a class="text-800 font-bold leading-flat" href="tel:{{ global_settings.phone }}">{{ global_settings.phone }}</a>
+                <a class="font-bold leading-flat" href="mailto:{{ global_settings.email }}">{{ global_settings.email }}</a>
+                <ul class="flex items-center gap-100 flow-space-400">
+                    {{ global_settings.socialmedia_links }}
+                        <li><a class="bg-light-glare text-primary size-500 flex items-center justify-center rounded-sm" aria-label="Gå til {{ type }}" href="{{ prefix }}{{ handle }}">{{ svg src="socialmedia/{{ type }}" class="text-primary h-[55%] w-auto" }}</a></li>
+                    {{ /global_settings.socialmedia_links }}
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-between">
+            <div class="flex items-center gap-200">
+                <img class="size-900" src="/images/mitid3-1.webp" alt="Mit id">
+                <div class="text-base">
+                    <a class="font-bold" href="/">Udvikling af MitID integrationer</a>
+                    <p class="opacity-80">i apps og webapplikationer</p>
+                </div>
+            </div>
+            <ul class="flex flex-wrap gap-x-900 text-right">
+                {{ global_settings.addresses }}
+                    <li>
+                        <strong>{{ city }}</strong>
+                        <p class="text-base opacity-80">{{ address }}</p>
+                    </li>
+                {{ /global_settings.addresses }}
+            </ul>
+        </div>
+    </div>
+    
+</footer>

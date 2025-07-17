@@ -1,0 +1,255 @@
+title: 'Common fields'
+fields:
+  -
+    handle: color
+    field:
+      options:
+        -
+          key: dark
+          value: Dark
+        -
+          key: light
+          value: Light
+        -
+          key: primary
+          value: Primary
+      display: Color
+      type: select
+      default: dark
+  -
+    handle: simple_text
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: false
+      type: bard
+      display: 'Simple text'
+  -
+    handle: text
+    field:
+      buttons:
+        - h1
+        - h2
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - large_text
+        - primary_color
+        - secondary_color
+      remove_empty_nodes: trim
+      type: bard
+      display: Text
+      bts_styles_button: icon
+      toolbar_mode: floating
+  -
+    handle: section_heading
+    field:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - removeformat
+        - indent_text
+        - primary_color
+        - secondary_color
+        - opacity
+        - gray_color
+        - aligncenter
+      remove_empty_nodes: false
+      type: bard
+      display: 'Section heading'
+  -
+    handle: alignment
+    field:
+      options:
+        justify-start: Left
+        'justify-center text-center': Center
+        'justify-end text-right': Right
+      default: justify-start
+      type: button_group
+      display: Alignment
+  -
+    handle: section_color
+    field:
+      options:
+        -
+          key: 'bg-dark  text-primary-glare'
+          value: Dark
+        -
+          key: 'bg-light text-dark-shade'
+          value: Light
+        -
+          key: 'bg-light-glare text-dark-shade'
+          value: White
+        -
+          key: 'bg-primary text-dark-shade'
+          value: Primary
+      type: select
+      display: 'Section color'
+      default: 'bg-dark  text-primary-glare'
+      clearable: true
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section title'
+      replicator_preview: false
+  -
+    handle: pt
+    field:
+      options:
+        -
+          key: 'md:pt-none'
+          value: None
+        -
+          key: 'md:pt-400'
+          value: XS
+        -
+          key: 'md:pt-700'
+          value: Small
+        -
+          key: 'md:pt-900'
+          value: Medium
+        -
+          key: 'md:pt-lg'
+          value: Large
+        -
+          key: 'md:pt-xl'
+          value: XL
+        -
+          key: 'md:pt-xxl'
+          value: XXL
+        -
+          key: 'md:pt-huge'
+          value: Huge
+      default: 'md:pt-large'
+      type: select
+      display: 'Padding top'
+  -
+    handle: pb
+    field:
+      options:
+        -
+          key: 'md:pb-none'
+          value: None
+        -
+          key: 'md:pb-400'
+          value: XS
+        -
+          key: 'md:pb-700'
+          value: Small
+        -
+          key: 'md:pb-900'
+          value: Medium
+        -
+          key: 'md:pb-lg'
+          value: Large
+        -
+          key: 'md:pb-xl'
+          value: XL
+        -
+          key: 'md:pb-xxl'
+          value: XXL
+        -
+          key: 'md:pb-huge'
+          value: Huge
+      default: 'md:pb-lg'
+      type: select
+      display: 'Padding bottom'
+  -
+    handle: size
+    field:
+      options:
+        -
+          key: h-500
+          value: Small
+        -
+          key: h-700
+          value: Normal
+        -
+          key: h-900
+          value: Large
+        -
+          key: h-lg
+          value: XL
+      type: select
+      display: Size
+      default: h-700
+  -
+    handle: gap
+    field:
+      options:
+        -
+          key: flow-space-none
+          value: None
+        -
+          key: flow-space-400
+          value: Xsmall
+        -
+          key: flow-space-600
+          value: Small
+        -
+          key: flow-space-900
+          value: Medium
+        -
+          key: flow-space-lg
+          value: Large
+        -
+          key: flow-space-xl
+          value: Xlarge
+        -
+          key: flow-space-xxl
+          value: Huge
+      type: select
+      display: Gap
+      default: flow-space-lg
+  -
+    handle: section_gap
+    field:
+      options:
+        -
+          key: flow-space-none
+          value: None
+        -
+          key: flow-space-400
+          value: Small
+        -
+          key: flow-space-900
+          value: Medium
+        -
+          key: flow-space-lg
+          value: Large
+      type: select
+      display: 'Section gap'
+      default: flow-space-lg
+  -
+    handle: main_content
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - table
+        - horizontalrule
+        - title
+        - primary_color
+        - large_text
+        - xl_text
+        - bts_paragraph
+      remove_empty_nodes: false
+      type: bard
+      display: 'Main content'

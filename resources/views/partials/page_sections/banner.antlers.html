@@ -1,0 +1,13 @@
+<section class="text-primary-50 relative bg-primary-950 flex items-end min-h-[clamp(20rem,calc(20vw+20vh+10rem),40rem)]">
+    <div class="container-wrapper pt-[calc(var(--size-lg)+var(--header-height))] pb-lg relative z-10">
+     <h1>{{ title }}</h1>
+     {{ if teaser }}
+        <p>{{ teaser }}</p>
+     {{ endif }}
+    </div>
+    <div class="absolute inset-0 opacity-50" style="view-transition-name: image_{{ id }};">
+        {{ if featured_image }}
+            {{ partial:components/image :imagePath="featured_image" w="1600" h="800" class="w-full h-full object-cover" }}
+        {{ endif }}
+    </div>
+</section>

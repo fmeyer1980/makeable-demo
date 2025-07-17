@@ -1,0 +1,22 @@
+<section class="space-y-900">
+    {{ partial:components/section_heading class="text-center" }}
+    <ul class=" auto-grid auto-grid-xl gap-800">
+        {{ collection in="cases"  }}
+            {{ if name }}
+                <li class="bg-light dark:bg-dark rounded-custom p-800 flow-y flow-space-600 text-center flex flex-col items-center">
+                    {{ if profile_image }}
+                        <div>
+                            {{ partial:components/image :imagePath="profile_image" class="size-xl rounded-full -mt-[calc(var(--size-800)+var(--size-400))]" }}
+                        </div>
+                    {{ endif }}
+                    <div>
+                        <b>{{ name }}</b>
+                        <p class="text-sm italic">{{ position }}</p>
+                    </div>
+                    <p class="grow opacity-70">{{ text }}</p>
+                    {{ svg src="/assets/logos/{{ logo }}" class="h-600 w-auto" }}
+                </li>
+            {{ endif }}
+        {{ /collection }}
+    </ul>
+</section>

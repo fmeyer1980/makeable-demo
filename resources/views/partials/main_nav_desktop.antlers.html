@@ -1,0 +1,21 @@
+<nav class="hidden md:block w-full" aria-label="Primær menu">
+    <menu class="flex gap-x-gutter justify-end">
+        {{ nav:collection:pages  }}
+            <li class="group relative">
+                <a class="relative flex items-center gap-[.5em] font-semibold {{ is_current || is_parent ?= ' underline underline-offset-4 decoration-primary' }}" href="{{ url }}">
+                    <span>{{ title }}</span>
+                    {{ if children }}
+                        {{ svg src="chevron-down" width="auto" height="auto" aria-hidden="true" class="h-[.6em] -mt-[.2em] w-auto opacity-80" }}
+                    {{ endif }}
+                </a>
+                {{ if children }}
+                    <ul class="hidden group-hover:flex flex-col absolute bg-light-glare text-dark-shade text-200">
+                        {{ children }}
+                            <li class="py-[1em] px-[2em]"><a href="{{ url }}">{{ title }}</a></li>
+                        {{ /children}}
+                    </ul>
+                {{ endif }}
+            </li>
+        {{ /nav:collection:pages }}
+    </menu>
+</nav>

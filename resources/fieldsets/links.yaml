@@ -1,0 +1,33 @@
+title: Links
+fields:
+  -
+    handle: links
+    field:
+      type: grid
+      display: Links
+      fields:
+        -
+          handle: url
+          field:
+            type: link
+            display: Url
+            width: 33
+        -
+          handle: text
+          field:
+            type: text
+            display: Text
+            width: 25
+        -
+          handle: icon
+          field:
+            path: svg/icons
+            type: iconamic
+            display: Icon
+            width: 25
+        -
+          handle: outline
+          field:
+            type: toggle
+            display: Outline
+            width: 25

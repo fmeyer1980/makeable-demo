@@ -1,0 +1,21 @@
+title: 'Section spacing'
+fields:
+  -
+    handle: section_settings
+    field:
+      type: revealer
+      display: 'Section settings'
+  -
+    handle: padding_top
+    field: common_fields.pt
+    config:
+      width: 50
+      if:
+        section_settings: 'equals true'
+  -
+    handle: padding_bottom
+    field: common_fields.pb
+    config:
+      width: 50
+      if:
+        section_settings: 'equals true'

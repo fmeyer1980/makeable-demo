@@ -1,0 +1,28 @@
+<li class="relative flex flex-col flow-y flow-space-100 group @container" x-show="filter(filterID, [{{ categories }}{{ count }}, {{ /categories }}0 ])">
+    <div class="relative overflow-hidden aspect-[4/5] rounded-custom" style="view-transition-name: case-image-{{ title | slugify }};">
+        {{ if logo }}
+            <div class="[ logo ]">
+                {{ svg src="/assets/logos/{{ logo }}" }}
+            </div>
+        {{ endif }}
+        {{ if (featured_image | ends_with('.mp4')) }}
+            <video loop="loop" muted loop="loop" preload="auto" playsinline autoplay class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 duration-300">
+                <source src="{{ featured_image }}" type="video/mp4">
+            </video>
+        {{ else }}
+            {{ partial:components/image  :imagePath="featured_image" h="300" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 duration-300" }}
+        {{ endif }}
+    </div>
+
+        <div class="bg-light-glare dark:bg-dark-shade rounded-custom grow flow-space-500 text-sm " style="view-transition-name: text-{{ title | slugify }};">
+        {{ if categories }}
+            {{ categories }}
+                <span class="opacity-70">{{ title }}{{ last != true ?= ',' }}</span>
+            {{ /categories }}
+        {{ endif }}
+         <h3 class="text-500 mt-100"><a class="link-parent" href="{{ url }}">{{ headline }}</a></h3>
+        </div>
+       
+
+   
+</li>

@@ -1,0 +1,143 @@
+title: Entries
+fields:
+  -
+    handle: section_heading
+    field: common_fields.section_heading
+    config:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - removeformat
+        - indent_text
+        - primary_color
+        - secondary_color
+        - opacity
+        - gray_color
+        - alignleft
+        - aligncenter
+      remove_empty_nodes: trim
+      validate:
+        - required
+  -
+    handle: list
+    field:
+      type: replicator
+      display: 'Entries list'
+      collapse: accordion
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            item:
+              display: Item
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - h3
+                      - bold
+                      - italic
+                      - removeformat
+                      - quote
+                      - anchor
+                      - primary_color
+                      - large_text
+                      - bts_paragraph
+                    toolbar_mode: floating
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Text
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+  -
+    handle: show_settings
+    field:
+      type: revealer
+      display: 'Show settings'
+  -
+    handle: settings
+    field:
+      type: group
+      display: Settings
+      if:
+        show_settings: 'equals true'
+      fields:
+        -
+          handle: hide_section_heading
+          field:
+            type: toggle
+            display: 'Hide section heading'
+            width: 33
+        -
+          handle: layout
+          field:
+            options:
+              -
+                key: grid
+                value: Grid
+              -
+                key: carousel
+                value: Carousel
+            default: grid
+            type: button_group
+            display: Layout
+            width: 33
+        -
+          handle: grid_size
+          field:
+            options:
+              -
+                key: auto-grid-sm
+                value: Small
+              -
+                key: auto-grid-md
+                value: Medium
+              -
+                key: auto-grid-lg
+                value: Large
+              -
+                key: auto-grid-xl
+                value: Xl
+            default: auto-grid-lg
+            type: select
+            display: 'Grid size'
+            width: 33
+            if:
+              layout: 'equals grid'
+        -
+          handle: visible_items
+          field:
+            options:
+              -
+                key: 'auto-cols-[100%]'
+                value: '1'
+              -
+                key: 'auto-cols-[calc(50%-calc(var(--gutter)/1.1))]'
+                value: '2'
+              -
+                key: 'auto-cols-[calc(33.33%-calc(var(--gutter)/1.2))]'
+                value: '3'
+              -
+                key: 'auto-cols-[calc(25%-calc(var(--gutter)/1.3))]'
+                value: '4'
+              -
+                key: 'auto-cols-[calc(20%-calc(var(--gutter)/1.4))]'
+                value: '5'
+            default: 'auto-cols-[calc(25%-calc(var(--gutter)/1.3))]'
+            type: select
+            display: 'Visible items'
+            width: 33
+            if:
+              layout: 'equals carousel'

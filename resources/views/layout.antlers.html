@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}" id="{{ if is_homepage }}home{{ elseif blueprint == 'case' }}case{{ else }}{{ title | slugify }}{{ endif }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
+        {{ partial:meta }}
+        {{ vite src="resources/css/site.css" }}
+        <style>
+            {{ collection in="cases" }}::view-transition-old(case-image-{{ title | slugify }}), {{ /collection }}
+            {{ collection in="cases" }}::view-transition-new(case-image-{{ title | slugify }}){{ if ! last }}, {{ endif }}{{ /collection }}
+            {
+                {{# animation: none;
+                mix-blend-mode: normal; #}}
+                height: 100%;
+                overflow: clip;
+                border-radius: var(--radius-custom);
+            }
+        </style>
+    </head>
+    <body 
+        class="flow-y flow-space-xl font-base text-300 bg-light-glare text-dark dark:bg-dark-shade dark:text-light-glare"
+        x-data="{darkMode: $persist(false), popup: false, atTop: false }" :class="{'dark': darkMode === true }"
+        @scroll.window="atTop = (window.pageYOffset > 100) ? true : false"
+        >
+        {{ partial:partials/site_head }}
+        <main class="wrapper flow-y">
+            {{ template_content }}
+        </main>
+        {{ partial:partials/site_foot }}
+         {{ vite src="resources/js/site.js" }}
+        <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    </body>
+</html>

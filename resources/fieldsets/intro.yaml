@@ -1,0 +1,28 @@
+title: Intro
+fields:
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+        - h1
+        - bts_paragraph
+        - title
+        - primary_color
+        - large_text
+      smart_typography: true
+      remove_empty_nodes: false
+      type: bard
+      display: Text
+  -
+    import: links
+  -
+    handle: media
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Media

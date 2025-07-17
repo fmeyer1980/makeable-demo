@@ -1,0 +1,25 @@
+title: 'About gallery'
+fields:
+  -
+    handle: text_box
+    field:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - removeformat
+        - anchor
+        - primary_color
+      smart_typography: true
+      remove_empty_nodes: false
+      type: bard
+      display: 'Text box'
+  -
+    handle: links
+    field: links.links
+  -
+    handle: images
+    field:
+      container: assets
+      type: assets
+      display: Images

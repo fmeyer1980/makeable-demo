@@ -1,0 +1,13 @@
+<nav class="mobil-menu w-full mx-gutter lg:hidden" x-show="showMobilNav">
+    <ul class="font-secondary font-bold text-700 divide-y divide-light-glare/10">
+        {{ nav:collection:pages }}
+            {{ if hide_in_main_menu != true }}
+                <li class="relative py-100">
+                    <a class="{{ is_current || is_parent ?= 'text-primary-glare opacity-100' }}"
+                        href="{{ url }}">{{ title }}</a>
+                </li>
+
+            {{ endif }}
+        {{ /nav:collection:pages }}
+    </ul>
+</nav>

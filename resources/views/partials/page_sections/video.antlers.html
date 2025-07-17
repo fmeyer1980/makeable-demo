@@ -1,0 +1,10 @@
+<button class="aspect-[12/7] max-h-[70rem] w-full relative grid place-content-center text-light-glare after:absolute after:inset-0 after:bg-black/30 group hover:after:bg-black/70 after:transition-color after:duration-300 overflow-clip" aria-label="Se video om {{ quote }}" x-on:click="popup = true, $nextTick(() => $refs.popupCloseButton.focus()), data.video = '{{ video }}'">
+    <div class="z-10 flex flex-col items-center flow-y flow-space-600 text-center py-xxl">
+        <div class="size-xxl md:size-xl group-hover:text-primary transition-all duration-300 group-hover:rotate-90" >
+            {{ svg src="play" class="h-full w-auto" aria-hidden="true " }}
+        </div>
+        <p class="h3 max-w-[70ch]">{{ quote }}</p>
+        <p class="opacity-90">{{ name }}</p>
+    </div>
+    {{ partial:components/image :imagePath="poster_image" w="1400" h="800" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out" }}
+</button>

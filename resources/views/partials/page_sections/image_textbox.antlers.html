@@ -1,0 +1,17 @@
+
+
+<section class="grid grid-cols-1 md:grid-cols-2 gap-y-900 gap-x-xxl items-center" aria-label="{{ text | raw | bard_items | where:type:heading | first | bard_text }}">
+    <div class="flow-y flow-space-600 prose-p:opacity-70 {{ settings.flip_content ? 'order-2' : 'order-1' }}">
+        {{ text }}
+        {{ if links }}
+                <div class="flex gap-200 flow-space-700 ">
+                {{ links }}
+                    {{ partial:components/btn color="secondary" }}
+                {{ /links }}
+            </div>
+        {{ endif }}
+    </div>
+    <div class="relative aspect-[4/3] before:absolute before:h-2/3 before:w-full before:bg-light dark:before:bg-dark before:top-1/2 before:-translate-y-1/2 before:rounded-custom before:overflow-clip {{ settings.flip_content ? 'order-1' : 'order-2' }}">
+        {{ partial:components/image :imagePath="image" h="400" w="400" class="  w-[calc(100%-var(--size-900)*2)] ml-900 h-full object-cover rounded-custom relative z-10"  }}
+    </div>
+</section>
